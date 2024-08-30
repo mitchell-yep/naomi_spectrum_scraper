@@ -54,7 +54,7 @@ indicator_conversion  <- tibble('indicator'=indicator, 'indicator_name'=indicato
 
 indicator_choice <- dlg_list(choices = indicator_conversion$indicator_name,
                            multiple = TRUE,
-                           title = "Select Countries")$res
+                           title = "Select Indicator")$res
 
 indicator_choice <- (indicator_conversion %>% filter(indicator_name %in% indicator_choice))$indicator
 
@@ -79,7 +79,7 @@ age_conversion  <- tibble('ageGroup'=ageGroup, 'age_name'=age_name)
 
 age_choice <- dlg_list(choices = age_conversion$age_name,
                              multiple = TRUE,
-                             title = "Select Countries")$res
+                             title = "Select Age Group")$res
 
 age_choice <- (age_conversion %>% filter(age_name %in% age_choice))$ageGroup
 
